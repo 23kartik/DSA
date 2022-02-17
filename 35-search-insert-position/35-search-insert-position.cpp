@@ -19,8 +19,7 @@ public:
         }
         if(target>nums[n-1])
             cnt=n;
-        else if(cnt==0)
-            cnt=0;
+        
        return cnt; 
     }
 };
