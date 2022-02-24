@@ -7,17 +7,16 @@ public:
         for(i=0;i<n;i++){
             if(target>=matrix[i][0] && matrix[i][m-1]>=target){
              store=i;
-              for(j=0;j<m;j++){
-            if(matrix[i][j]==target)
-                return true;
-                 
-        }  
                 break;
             }
                 
         }
-
-        
+        if(store==-3)
+            return false;
+        for(j=0;j<m;j++){
+            if(matrix[store][j]==target)
+                return true;
+        }
         return false;
     }
 };
