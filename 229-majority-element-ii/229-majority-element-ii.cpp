@@ -1,37 +1,37 @@
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
-        int sz = nums.size();
-  int num1 = -1, num2 = -1, count1 = 0, count2 = 0, i;
-  for (i = 0; i < sz; i++) {
-    if (nums[i] == num1)
-      count1++;
-    else if (nums[i] == num2)
-      count2++;
-    else if (count1 == 0) {
-      num1 = nums[i];
-      count1 = 1;
-    } else if (count2 == 0) {
-      num2 = nums[i];
-      count2 = 1;
-    } else {
-      count1--;
-      count2--;
-    }
-  }
-  vector < int > ans;
-  count1 = count2 = 0;
-  for (i = 0; i < sz; i++) {
-    if (nums[i] == num1)
-      count1++;
-    else if (nums[i] == num2)
-      count2++;
-  }
-  if (count1 > sz / 3)
-    ans.push_back(num1);
-  if (count2 > sz / 3)
-    ans.push_back(num2);
-  return ans;
+        int cnt1=0,cnt2=0,element1=-1,element2=-1;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==element1)cnt1++;
+            else if(nums[i]==element2)cnt2++;
+            else if(cnt1==0){
+                element1=nums[i];
+                cnt1=1;
+            }
+            else if(cnt2==0){
+                element2=nums[i];
+                cnt2=1;
+            }
+            else{
+                cnt1--;
+                cnt2--;
+            }
+        }
+        cnt1=cnt2=0;
+        vector<int>v;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]==element1)
+                cnt1++;
+            else if(nums[i]==element2)
+                cnt2++;
+        }
+        if(cnt1>nums.size()/3)
+            v.push_back(element1);
+        if(cnt2>nums.size()/3)
+            v.push_back(element2);
+        
+        return v;
         
     }
 };
