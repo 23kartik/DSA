@@ -10,7 +10,9 @@ public:
               for(j=0;j<m;j++){
             if(matrix[i][j]==target)
                 return true;
+                 
         }  
+                break;
             }
                 
         }
