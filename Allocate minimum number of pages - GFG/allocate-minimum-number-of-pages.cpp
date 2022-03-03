@@ -23,7 +23,8 @@ bool allocationispossible(int arr[], int n,int barrier,int student){
     else
     pages+=arr[i];
 }
-if(allocatedstudent>student) return false;
+if(allocatedstudent>student) 
+return false;
 else
 return true;
 
@@ -40,10 +41,10 @@ return true;
                 res=mid;
                 high=mid-1;
             }
-            
             else
             low=mid+1;
         }
+        return res;
     }
 };
 
