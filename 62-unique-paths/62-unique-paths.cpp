@@ -5,7 +5,7 @@ public:
         int i,j;
         if(m==1&&n==1)
             return 1;
-        dp[0][0]=0;
+        dp[0][0]=1;
         for(i=1;i<m;i++)
             dp[i][0]=1;
         for(i=1;i<n;i++)
