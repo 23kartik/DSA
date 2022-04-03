@@ -4,7 +4,7 @@ public:
         int n=grid.size(),m=grid[0].size(),i,j;
         int dp[n][m];
         memset(dp,0,sizeof(dp));
-       
+       dp[0][0]=1;
        if(grid[0][0]==1||grid[n-1][m-1]==1)
            return 0;
         if((m==1&&n==1))
