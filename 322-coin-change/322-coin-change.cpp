@@ -8,15 +8,16 @@ public:
         dp[0]=0;
         for(i=1;i<amount+1;i++){
             for(j=0;j<n;j++){
-                if(i-coins[j]<0)break;
-               
+                if(i-coins[j]<0)break;              
                 if(dp[i-coins[j]]!=INT_MAX){
                     dp[i]=min(dp[i],dp[i-coins[j]]+1);
                 }
             }
         }
-        if(dp[amount]==INT_MAX)
-            return -1;
+         for(int i=0;i<=amount;i++){
+            if(dp[i]==INT_MAX)
+                dp[i]=-1;
+        }
         return dp[amount];
     }
 };
