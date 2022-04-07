@@ -3,10 +3,10 @@ public:
     int coinChange(vector<int>& coins, int amount) {
         sort(coins.begin(),coins.end());
         int i,j,n=coins.size();
-        int dp[amount+1];
-        for(i=0;i<amount+1;i++){
-            dp[i]=INT_MAX;
-        }
+       vector<int>dp(amount+1,INT_MAX);
+        // for(i=0;i<amount+1;i++){
+        //     dp[i]=INT_MAX;
+        // }
         dp[0]=0;
         for(i=1;i<amount+1;i++){
             for(auto c:coins){
