@@ -3,11 +3,7 @@ public:
     int findMaxForm(vector<string>& strs, int m, int n) {
         int i,j,zeroes=0,ones=0;
         int dp[m+1][n+1];
-        for(i=0;i<=m;i++){
-            for(j=0;j<=n;j++){
-                dp[i][j]=0;
-            }
-        }
+       memset(dp,0,sizeof(dp));
         for(string str:strs){
             zeroes=0,ones=0;
             for(char u:str){
