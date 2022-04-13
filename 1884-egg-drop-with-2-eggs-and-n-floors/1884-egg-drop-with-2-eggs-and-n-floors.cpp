@@ -10,18 +10,16 @@ public:
         }
         dp[2][0]=0;
 
-        for(int i=2;i<3;i++){
+
             for(int j=1;j<=n;j++){
-                dp[i][j]=INT_MAX;
-                for(int k=1;k<=j;k++){
-                   
-                    ans=1+max(dp[i-1][k-1],dp[i][j-k]);
-                    
-                    dp[i][j]=min(ans,dp[i][j]);
+                dp[2][j]=INT_MAX;
+                for(int k=1;k<=j;k++){  
+                    ans=1+max(dp[1][k-1],dp[2][j-k]);     
+                    dp[2][j]=min(ans,dp[2][j]);
                 }
                 
             }
-        }
+
         return dp[2][n];
     }
 };
