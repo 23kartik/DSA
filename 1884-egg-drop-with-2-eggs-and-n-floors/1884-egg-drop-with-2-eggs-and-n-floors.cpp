@@ -9,12 +9,7 @@ public:
             
         }
         dp[2][0]=0;
-       // for(int i=0;i<=2;i++){
-       //     for(int j=0;j<=n;j++){
-       // cout<<dp[i][j]<<" ";
-       //  }
-       // cout<<endl;
-       //  }
+
         for(int i=2;i<3;i++){
             for(int j=1;j<=n;j++){
                 dp[i][j]=INT_MAX;
