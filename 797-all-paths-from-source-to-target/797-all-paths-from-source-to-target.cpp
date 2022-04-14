@@ -5,10 +5,8 @@ public:
         if(src==dest){
             ans.push_back(temp); 
             return;
-        }
-  
-        for(auto u:graph[src]){
-           
+        } 
+        for(auto u:graph[src]){        
             dfs(u,dest,graph,ans,temp);
         } 
     }
