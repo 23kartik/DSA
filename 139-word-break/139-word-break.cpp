@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool wordBreak(string s, vector<string>& wordDict) {
-         vector<bool>dp(s.size(),false);
+         vector<bool>dp(s.size()+1,false);
         dp[0]=true;
        for(int i = 0; i <= s.size(); i++)
         {
@@ -16,6 +16,7 @@ public:
                     }
                 }
             }
-        }return dp[s.size()];
+        }
+        return dp[s.size()];
     }
 };
