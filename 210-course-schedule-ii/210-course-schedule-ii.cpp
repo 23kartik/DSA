@@ -19,7 +19,7 @@ public:
         vector<int> colors(numCourses, 0), res;
         vector<vector<int>> graph(numCourses);
         
-        // build graph
+        
         for (auto pre : prerequisites) {
             graph[pre[0]].push_back(pre[1]);
         }
