@@ -8,7 +8,7 @@ public:
         map<char,int>smp;
         int i,j,flag=0;
         i=0,j=0;
-       while(i<=j&&j<s.size()){
+       while(i<s.size()&&j<s.size()){
            if(j==p.size()){
                flag=1;
            }
