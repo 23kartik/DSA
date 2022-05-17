@@ -14,7 +14,6 @@ public:
            }
            else{
                balloon=points[i+1][1];
-               cout<<i<<endl;
                cnt++;
                
            }
