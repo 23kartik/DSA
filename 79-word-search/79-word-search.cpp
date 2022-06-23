@@ -13,13 +13,15 @@ public:
                 return false;
             temp+=board[i][j];
             visited[i][j]=1;
-            bool a=search(i,j+1,k+1,temp,visited,board,word);     
-            bool b=search(i+1,j,k+1,temp,visited,board,word);
-            bool c=search(i,j-1,k+1,temp,visited,board,word);
-            bool d=search(i-1,j,k+1,temp,visited,board,word);    
-            visited[i][j]=0;
-            if(a||b||c||d)
+            if(search(i,j+1,k+1,temp,visited,board,word))
                 return true;
+            if(search(i+1,j,k+1,temp,visited,board,word))
+                return true;
+            if(search(i,j-1,k+1,temp,visited,board,word))
+                return true;
+            if(search(i-1,j,k+1,temp,visited,board,word))
+                return true; 
+            visited[i][j]=0;
         }
         return false;
     }
