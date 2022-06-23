@@ -7,12 +7,12 @@ public:
             return false;
         }
         if(i>=0 && i<board.size() && j>=0 && j<board[0].size()){
-            if(visited[i][j])
+            if(!visited[i][j])
                 return false;
             if(board[i][j]!=word[k])
                 return false;
             temp+=board[i][j];
-            visited[i][j]=1;
+            visited[i][j]=0;
             if(search(i,j+1,k+1,temp,visited,board,word))
                 return true;
             if(search(i+1,j,k+1,temp,visited,board,word))
@@ -21,14 +21,14 @@ public:
                 return true;
             if(search(i-1,j,k+1,temp,visited,board,word))
                 return true; 
-            visited[i][j]=0;
+            visited[i][j]=1;
         }
         return false;
     }
     
     bool exist(vector<vector<char>>& board, string word) {
         int m=board.size(),n=board[0].size();
-        vector<vector<int>> visited(m,vector<int> (n,0));
+        vector<vector<int>> visited(m,vector<int> (n,1));
         for(int i=0;i<board.size();i++){
             for(int j=0;j<board[0].size();j++){
                 if(board[i][j]==word[0]){
