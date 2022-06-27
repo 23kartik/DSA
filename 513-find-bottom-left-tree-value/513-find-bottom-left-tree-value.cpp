@@ -12,7 +12,7 @@
 class Solution {
 public:
     int findBottomLeftValue(TreeNode* root) {
-        map<int,int>mp;
+       
         queue<TreeNode*>q;
      
         q.push(root);
