@@ -10,7 +10,7 @@ public:
             int mini=mp.begin()->first;
             for(int i=mini;i<mini+groupSize;i++){
                 if(mp.find(i)==mp.end()) return false;
-                int cnt=mp.find(i)->second;
+                int cnt=mp[i];
                 if(cnt==1) mp.erase(i);
                 else
                     mp[i]--;
