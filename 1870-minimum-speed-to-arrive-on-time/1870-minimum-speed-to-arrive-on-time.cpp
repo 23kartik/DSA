@@ -11,8 +11,7 @@ public:
         }
         
           time+=(dist[dist.size()-1]*1.0)/(speed*1.0);
-        // if(speed==9)
-        //     cout<<time;
+   
         if(time>hour)
         return false;
         return true;
@@ -23,16 +22,15 @@ public:
         if (hour <= (double)(dist.size() - 1))
             return -1;      
          int l=1,r=1e7,mid;
-        while(l<r){
+        while(l<=r){
             mid=(l+r)/2;
             if(possible(dist,hour,mid)){
-               
-                r=mid;
+               res=mid;
+                r=mid-1;
             }
             else
                 l=mid+1;
-        }
-       
-        return l;
+        }       
+        return res;
     }
 };
