@@ -2,18 +2,16 @@ class Solution {
 public:
     bool possible(vector<int>& dist, double hour,int speed){
          double time=0;
-        for(int i=0;i<dist.size()-1;i++){
-           
-            time+=(dist[i]*1.0)/(speed*1.0);
+        for(int i=0;i<dist.size();i++){     
              time=(ceil(time));
+            time+=(dist[i]*1.0)/(speed*1.0);
+           
             if(time>hour)
                 return false;
-        }
-        
-          time+=(dist[dist.size()-1]*1.0)/(speed*1.0);
+        }        
+         
    
-        if(time>hour)
-        return false;
+     
         return true;
     }
     
