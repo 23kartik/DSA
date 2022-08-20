@@ -13,7 +13,7 @@ public:
                     mp[s[low]]++;
                     low++;
                 }
-                    if(min_length>high-low){
+                    if(min_length>high-low+1){
                         start=low;
                         min_length=high-start+1;
                     }
