@@ -9,12 +9,11 @@ public:
             }
             else{
                 maxi=max(cnt,maxi);
-            }
-                 
+                cnt=0;  
+            }    
             i++;
         }
-        if(nums.size()==1 && nums[0]==1)
-        return 1;
-        return maxi>0?maxi+1:0;
+maxi=max(cnt,maxi);
+        return maxi;
     }
 };
