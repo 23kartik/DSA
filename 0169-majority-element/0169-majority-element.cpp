@@ -4,9 +4,10 @@ public:
         int cnt=0,element=nums[0];
         for(int i=0;i<nums.size();i++){
             if(cnt==0){
-                cnt++;
+               
                 element=nums[i];
             }
+            if(element==nums[i]) cnt++;
             else
             cnt--;
         }
