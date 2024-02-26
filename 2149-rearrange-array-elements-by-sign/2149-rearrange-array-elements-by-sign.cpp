@@ -8,7 +8,7 @@ public:
                 ans[j]=nums[i];
                 j+=2;
             }
-            else if(nums[i]<0){
+            else{
                  ans[k]=nums[i];
                  k+=2;
             }
